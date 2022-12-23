@@ -2,18 +2,24 @@
   "name": "crud-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "electron": "^22.0.0",
+    "sqlite3": "^5.1.4",
+    "uid": "^2.0.1"
   },
   "dependencies": {
     "iconify-icon": "^1.0.2",
+    "knex": "^2.3.0",
+    "sequelize": "^6.28.0",
     "toastify-js": "^1.12.0"
   }
 }

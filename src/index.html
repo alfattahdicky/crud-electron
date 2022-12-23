@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
   </head>
   <body>
     <div
@@ -22,33 +22,10 @@
             id="addTodoInput"
             placeholder="Ex: Belanja Makanan"
           />
-          <button type="button" class="btn btn-primary">Add</button>
+          <button type="button" class="btn btn-primary" id="btnAdd">Add</button>
         </div>
-        <div class="list-todo mt-4" id="listTodo">
-          <ul class="list-group gap-3">
-            <li
-              class="list-group-item shadow-sm rounded-2 d-flex justify-content-between align-items-center"
-            >
-              <h3 class="fs-6 mb-0">Belanja Makanan</h3>
-              <div class="icon-group">
-                <iconify-icon
-                  icon="mdi:edit"
-                  class="fs-5 cursor-pointer"
-                  style="cursor: pointer"
-                  id="editBtn"
-                ></iconify-icon>
-                <iconify-icon
-                  icon="mdi:delete"
-                  class="fs-5 cursor-pointer"
-                  style="cursor: pointer"
-                  id="deleteBtn"
-                ></iconify-icon>
-              </div>
-            </li>
-            <li class="list-group-item shadow-sm rounded-2">Makan Nasi</li>
-            <li class="list-group-item shadow-sm rounded-2">
-              Bermain di Aspal
-            </li>
+        <div class="list-todo mt-4 p-2" style="height: 400px;" >
+          <ul class="list-group gap-3" id="listTodo">
           </ul>
         </div>
       </main>
