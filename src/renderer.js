@@ -1,10 +1,6 @@
-console.log(window.api);
-import "../node_modules/iconify-icon/dist/iconify-icon.js";
-import insertTodo from "./controllers/todo.js";
 const todoInput = document.getElementById("addTodoInput");
 const addTodo = document.getElementById("btnAdd");
 const listTodoEl = document.getElementById("listTodo");
-
 let datas = [];
 
 const todoEl = (datas) => {
@@ -40,7 +36,6 @@ addTodo.addEventListener("click", () => {
   const random = Math.floor(Math.random() * 1000);
   const item = { title: value, edit: false };
   datas = [...datas, item];
-  insertTodo(datas);
   console.log(datas, "add");
   todoEl(datas);
 });
