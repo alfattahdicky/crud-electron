@@ -7,7 +7,7 @@ db.schema.hasTable("items").then(function (exists) {
       t.string("todo", 100);
       t.boolean("edit").defaultTo(false);
     });
-  } 
+  }
 });
 
 const findAll = async () => {
@@ -19,5 +19,12 @@ const findAll = async () => {
   }
 };
 
-console.log(findAll().then((value) => console.log(value)));
-export { findAll };
+const create = async (data) => {
+  try {
+    const query = await db("items").insert(data);
+    return query;
+  } catch (err) {
+    return err.message;
+  }
+};
+export { findAll, create };
