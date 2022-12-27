@@ -27,4 +27,32 @@ const create = async (data) => {
     return err.message;
   }
 };
-export { findAll, create };
+
+const findById = async (id) => {
+  try {
+    const query = await db.select("*").from("items").where("id", "=", id);
+    return query;
+  } catch (err) {
+    return err.message;
+  }
+};
+
+const updateById = async (id, data) => {
+  try {
+    const query = await db("items").where("id", "=", id).update(data);
+    return query;
+  } catch (err) {
+    return err.message;
+  }
+};
+
+const removeById = async (id) => {
+  try {
+    const query = await db("items").where("id", "=", id).del(["todo"]);
+    return query;
+  } catch (err) {
+    return err.message;
+  }
+};
+
+export { findAll, create, findById, updateById, removeById };
